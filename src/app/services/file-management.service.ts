@@ -12,6 +12,7 @@ export class FileManagementService {
   constructor(private http: HttpClient) { }
  
   fileUrl: string = "http://localhost:3000/files";
+  fileSearchUrl: string = "http://localhost:3000/files/search";
 
   getAllFiles(){
     return this.http.get<File[]>(this.fileUrl);
@@ -31,6 +32,10 @@ export class FileManagementService {
 
   getFileByName(name: string){
     return this.http.get<File[]>(this. fileUrl + '/' + name);
+  }
+
+  searchForWord(word:string){
+    return this.http.get(this.fileSearchUrl + '/' + word);
   }
  
 }

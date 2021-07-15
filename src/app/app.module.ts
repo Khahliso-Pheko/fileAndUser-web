@@ -19,7 +19,7 @@ import { WordSearchComponent } from './file/word-search/word-search.component';
 //import { FileSearchResultsComponent } from './file/file-search-results/file-search-results.component';
 import { FileFrequencyDistibutionComponent } from './file/file-frequency-distibution/file-frequency-distibution.component';
 import { ShowfileByIdComponent } from './file/showfile-by-id/showfile-by-id.component';
-import { FileSearchComponent } from './file/file-search/file-search.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +36,6 @@ import { FileSearchComponent } from './file/file-search/file-search.component';
    // FileSearchResultsComponent,
     FileFrequencyDistibutionComponent,
    ShowfileByIdComponent,
-   FileSearchComponent
   ],
   imports: [
     BrowserModule,
