@@ -1,0 +1,43 @@
+
+    
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-success">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="goToFiles()">FileManager</a>
+    </div>
+  </nav>
+  
+  <!-- main app container -->
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3">
+                        
+                        <div>
+                            <span> Edit user</span>
+                         </div>
+                                     <div class="form-group">
+                                        <label for="name"></label>
+                                         <input placeholder="name" type="text" class="form-control form-control-solid placeholder-no-fix form-group"  name="name" [(ngModel)] = "name" required="required"  />
+                                     </div>
+                                     <div class="form-group">
+                                        <label for="email"></label>
+                                         <input placeholder="email" type="text" class="form-control form-control-solid placeholder-no-fix form-group"  name="email" [(ngModel)] = "email" required="required"  />
+                                     </div>
+                                     <div class="form-group">
+                                        <label for="password"></label>
+                                        <input placeholder="password" type="password" class="form-control form-control-solid placeholder-no-fix form-group"  name="password" [(ngModel)] = "password" required="required"  />
+                                    </div>
+                             <div class="row">
+                                 <div class="col-md-6 col-lg-offset-5">
+                                     <button [disabled]="loading" class="btn btn-primary" (click)="onBackClick()">Back to the list</button>
+                                     <button [disabled]="loading" class="btn btn-primary" (click)="onEditClick()">Save</button>
+                                     <button [disabled]="loading" class="btn btn-danger" (click)="onDeleteClick()">Delete</button>
+                                 </div>
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
