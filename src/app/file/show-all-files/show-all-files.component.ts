@@ -35,4 +35,7 @@ export class ShowAllFilesComponent implements OnInit {
   onUploadClick(){
     this.router.navigate(['file/upload']);
   }
+  onSearchClick(){
+    this.router.navigate(['file/search']);
+  }
 }

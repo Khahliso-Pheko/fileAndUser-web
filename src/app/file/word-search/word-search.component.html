@@ -12,8 +12,33 @@
   <div class="container">
       <div class="row">
           <div class="col-sm-6 offset-sm-3">
-              
-              <!--router-outlet></router-outlet-->
+              <br>
+              <br>
+            <div class="input-group">
+              <input type="search" class="form-control rounded" placeholder="Search for a word" aria-label="Search"
+                aria-describedby="search-addon"  [(ngModel)] = "searchWord"/>
+              <button type="button" class="btn btn-outline-primary" (click)="onSearchClick()">search</button>
+            </div>
+            <br>
+            <div *ngIf="checkifsearchclicked">
+              <div>
+                <h4 style="text-align: center;">Search results</h4>
+              </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>File Name</th>
+                  <th>Word Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let file of files; let i=index">
+                  <td>{{file}}</td>
+                  <td>{{counts[i]}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
       </div>
   </div>
